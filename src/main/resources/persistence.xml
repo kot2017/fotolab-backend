@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="persistenceUnit">
+        <class>pl.wl.foto.reakt.entity.Aparaty</class>
+        <class>pl.wl.foto.reakt.entity.Chemikalia</class>
+        <class>pl.wl.foto.reakt.entity.Filmy</class>
+        <class>pl.wl.foto.reakt.entity.Historia</class>
+        <class>pl.wl.foto.reakt.entity.Obiektywy</class>
+        <class>pl.wl.foto.reakt.entity.Producent</class>
+        <class>pl.wl.foto.reakt.entity.Wyniki</class>
+        <class>pl.wl.foto.reakt.entity.Wywolania</class>
+        <class>pl.wl.foto.reakt.entity.Zdarzenie</class>
+
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/foto"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>
