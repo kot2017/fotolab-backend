@@ -1,6 +1,5 @@
-# fotospring
+# Fotolab - Backend
 
-## FotoSpring
 
 Rest services for managing photographic experiments with different films and developers.
 ### main technical  goal:
