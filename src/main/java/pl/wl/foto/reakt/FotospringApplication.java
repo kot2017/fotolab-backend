@@ -11,9 +11,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class FotospringApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FotospringApplication.class, args);
+            SpringApplication.run(FotospringApplication.class, args);
     }
-
 
 
     @Bean
@@ -26,10 +25,6 @@ public class FotospringApplication {
         };
     }
 
-
-//    <bean id="multipartResolver"
-//    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-//</bean>
 
     @Bean(name = "multipartResolver")
     public CommonsMultipartResolver multipartResolver() {

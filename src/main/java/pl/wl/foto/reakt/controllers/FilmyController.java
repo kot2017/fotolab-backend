@@ -1,6 +1,7 @@
 package pl.wl.foto.reakt.controllers;
 
 
+import com.sun.xml.bind.v2.TODO;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -60,26 +61,14 @@ public class FilmyController {
     public ResponseEntity<?> saveItem(@RequestBody Wywolanie wywolanie) {
         System.out.println("  saveItem   wywolanie = " + wywolanie);
         resourceController.saveWywolanie(wywolanie);
-//        HttpHeaders responseHeaders = new HttpHeaders();
-//        responseHeaders.set("Access-Control-Allow-Origin", "http://localhost:3000");
-//        responseHeaders.set("Access-Control-Allow-Methods"," GET, POST, HEAD, OPTIONS, PUT, DELETE, PATCH");
         return new ResponseEntity(HttpStatus.OK);
     }
 
 
-//    @RequestMapping(value = "/filmy/w", method = RequestMethod.GET, produces = "application/json")
-//    public ResponseEntity<?> getWywolanie(@RequestParam Integer id) {
-//        Optional<Wywolania> w = wywolaniaRepository.findById(id);
-//        return new ResponseEntity(w.get(), HttpStatus.OK);
-//    }
 
 
     //========================================================
 
-    //https://www.baeldung.com/spring-response-header
-    //Access-Control-Allow-Origin: *
-
-    // @CrossOrigin(origins = "http://localhost:8000")
 
     /**
      * Lista producentów filmów i chemii
@@ -138,6 +127,7 @@ public class FilmyController {
 
     }
 
+    //TODO
     /**
      * 4	POST
      * /foto/wywolanie
@@ -148,6 +138,7 @@ public class FilmyController {
 //    public ResponseEntity<?>
 
 
+    //TODO
     /**
      * 5	GET
      * /foto/wywolanie
@@ -166,6 +157,7 @@ public class FilmyController {
     }
 
 
+    //TODO
     /**
      * 6	GET
      * /foto/wywolanie
@@ -174,9 +166,10 @@ public class FilmyController {
      */
 
 
+    //TODO
     /**
-     * @param katalog
-     * @param foto
+     * @param katalog - kataolog w ktorym sa umieszczane zdjecia
+     * @param foto - nazwa pliku ze zdjeciem
      * @param response
      * @param request
      * @throws IOException
@@ -226,10 +219,7 @@ public class FilmyController {
 
 
     public String getOsFileSeparator() {
-        String ret = "";
-        ret = File.separator;
-        ret = System.getProperty("file.separator");
-        ret = String.valueOf(File.separatorChar);
+        String  ret = String.valueOf(File.separatorChar);
         System.out.println("Current OS file separator = " + ret);
         String filePath = "test" + ret + "dev2qa.txt";
         System.out.println("filePath = " + filePath);
